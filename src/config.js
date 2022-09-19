@@ -6,52 +6,53 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "YOUR COLLECTION NAME";
-const description = "Remember to replace this description";
+const namePrefix = "Nifty Spooks";
+const description = "PFP Project made up of 10,000 unreal NFTs for the Nifty Spooks Community";
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 5,
+    growEditionSizeTo: 20,
     layersOrder: [
       { name: "Background" },
-      { name: "Eyeball" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
+      { name: "Skin" },
+      { name: "Weapons" },
+      { name: "Tops" },
+      { name: "Hair" },
+      { name: "Mouth" },
+      { name: "Eyes" },
+      { name: "Hands" },
     ],
   },
 ];
 
-const shuffleLayerConfigurations = false;
+const shuffleLayerConfigurations = true;
 
 const debugLogs = false;
 
 const format = {
-  width: 512,
-  height: 512,
+  width: 4096,
+  height: 4096,
   smoothing: false,
 };
 
 const extraMetadata = {
-  external_url: "https://codecats.xyz", // Replace with your website or remove this line if you do not have one.
+  external_url: "https://niftyspooks.xyz", // Replace with your website or remove this line if you do not have one.
 };
 
 // NFTPort Info
 // ** REQUIRED **
-const AUTH = "YOUR API KEY HERE";
+const AUTH = "8cb0b539-4e44-4475-93b3-5391e7550e9a";
 const LIMIT = 2; // Your API key rate limit
-const CONTRACT_NAME = 'CRYPTOPUNKS';
-const CONTRACT_SYMBOL = 'CP';
+const CONTRACT_NAME = 'NiftySpooks.xyz';
+const CONTRACT_SYMBOL = 'NFS';
 const CONTRACT_TYPE = 'erc721';
-const MINT_TO_ADDRESS = 'YOUR WALLET ADDRESS HERE';
+const MINT_TO_ADDRESS = '0xc9c70E03b11346a4D7cCfd38747A2fC3355F9E7f';
 const CHAIN = 'rinkeby';
 const METADATA_UPDATABLE = true; // set to false if you don't want to allow metadata updates after minting
 const ROYALTY_SHARE = 1000; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
-const ROYALTY_ADDRESS = "0xd8B808A887326F45B2D0cd999709Aa6264CeF919"; // Address that will receive the royalty
+const ROYALTY_ADDRESS = "0x281bEC6615Af809d05B54B9c67929115B4940646"; // Address that will receive the royalty
 // ** OPTIONAL **
 let CONTRACT_ADDRESS = "YOUR CONTRACT ADDRESS"; // If you want to manually include it
 // Generic Metadata is optional if you want to reveal your NFTs
